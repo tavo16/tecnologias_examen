@@ -1,0 +1,534 @@
+<!DOC TYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>Juegos PS4</title>
+        <script src='jquery-1.8.3.min.js'></script>
+	    <script src='jquery.elevatezoom.js'></script>    
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"> 
+        <link type="text/css" rel="stylesheet" href="css/estilo.css">
+    </head>
+    
+    <body> 
+    <header>
+        <div  class="container col-md-12 xs-12 sm-10">
+            <div class="custom-header-media">
+            <div id="custom-header" class="wp-custom-header"> <img src="imagenes/call_of_duty_MllW(2).png"  alt="logo2" ></div>
+            </div>
+        </div>     
+    </header>
+
+    <nav id="top" class="navbar navbar-expand-sm navbar-dark" style="background-color:rgb(0,153,120,0.3)"> 
+        <button class="navbar-toggler" style="background-color:rgb(0,153,120,0.3);" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon" color="#DDD"></span></button>
+        
+        <img src="imagenes/logoPS.png" alt="logo3" width="7%" height= "7%"> <a class="navbar-brand" style="color:aliceblue ">Mundo PlayStation</a>
+        
+        <div  class="collapse navbar-collapse justify-content-end" id=nav-content >
+            <ul class="navbar-nav" style="align-items:center">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>    
+                </li>    
+                <li class="nav-item">
+                <a class="nav-link" href="ps5.html">PS5</a>    
+                </li>  
+                <li class="nav-item">
+                <a class="nav-link" href="ps4.html">PS4</a>    
+                </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="loginregistro.html">Login</a>    
+                </li>
+                <li class="nav-item">
+                    <div style="padding-bottom:1em" >
+                    <button type="button" style="background-color:rgb(0,153,120,0.3) " class="btn btn-lg " data-toggle="modal" data-target="#Carrito"> <img src="imagenes/carrito.png" height ="40" width="40" /></button> 
+                </div>
+                </li>
+            </ul> 
+        </div>
+    
+        <div class="modal fade col-md-12 xs-12" id="Carrito" tabindex="-1" role="dialog" arial-labelledby="modalLabelLarge" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div style="background-color:rgba(0,0,0,0.6)" class="modal-content">                            
+                <div class="modal-header">            <h4 class="modal-title" id="modalLabelLarge MiProducto" ></h4>
+                <button type="button" class="Close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">❌</span>
+                </button>   
+                </div>  
+                <div class="modal-body col-md-12 xs-12"> 
+                <table id="tablCarrito" >
+                <tbody>
+                <div class="row">
+                <div id="itens" class="col-md-8 sm-8 xs-12" style="font-size:18px; color:rgba(255,255,240,0.8) ;"><strong style="font-size:20px; color:rgba(255,255,240,0.8) ;">Cantidad Producto          Precio</strong><br/> </div>
+                <div class="col-md-4 sm-4 xs-12"><strong style="font-size:20px; color:rgba(255,255,240,0.8) ;">Total a Pagar: USD$ <span id="total"></span> </strong> </div>
+                </div>
+                </tbody>                 
+                <button id="limpiar" type="button" class="btn btn-success btn-lg " data-toggle="modal" data-target="#" onclick=" localStorage.clear(); location.reload();"> Eliminar Selecciones de Compra </button>
+                <button type="button" style="margin-left: 10px;" class="btn btn-success btn-lg " data-toggle="modal" data-target="#" onclick=" localStorage.setItem(); location.reload();">Terminar compra</button>
+                <span id="resp"></span>    
+                </table>           
+                </div>
+                </div>
+            </div>
+        </div>  
+    </nav>
+
+    <section>
+<div class="row">
+    <div class="container">
+    <h1 style="text-align: center;">Galeria PS4</h1>
+    
+<ul class="row">
+<li class=" col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4asssassinscocd.jpg'/><br />
+    <br>Assassin's Creed <br/>Odyssey <strong><br/>USD$ 31,87</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad1">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('ASSASSINS CREED ODYSSEY', document.getElementById('Cantidad1').value, '31.87', 1)"> Comprar </button></button>
+</div>
+</li>
+
+<li class=" col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4redcd.jpg'/><br />    
+	<br>Red Dead <br/>Redemption II <br/><strong>USD$ 21,73</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad2">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('RED DEAD REDEMPTION II', document.getElementById('Cantidad2').value, '21.73', 2)"> Comprar </button></button>
+    </div>
+</li>
+    
+<li class="col-md-3 sm-3 xs-12">
+<div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4assassinucd.jpg'/><br />
+	<br>Assasins's Creed<br/> Unity<strong><br/>USD$ 20,14</strong><br/>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad3">
+	<button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('ASSASSINS CREED UNITY', document.getElementById('Cantidad3').value, '20.14', 3)"> Comprar </button></button>   
+</div>
+</li>
+
+<li class="col-md-3 sm-3 xs-12">    
+<div align="center">
+	<button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4tombraidercd.jpg' width="500" height="500"/><br />
+    <br> Shadow of the <br/>Tomb Raider <strong><br/>USD$ 20,28</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad4">
+    <button type="button" style=" color: aliceblue ; background-color:#31B404;" class="btn btn-lg" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('SHADOW OF THE TOMB RAIDER', document.getElementById('Cantidad4').value, '20.28', 4)"> Comprar </button></button>
+</div>    
+</li>
+    
+</ul>
+</div>
+</div>
+
+<div class="row">
+    <div class="container">
+    <ul class="row">
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4justdance2019cd.jpg'/><br />
+	<br>JUST DANCE 2019<strong><br/>USD$ 30,00</strong><br/>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad5">
+	<button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('JUST DANCE 2019', document.getElementById('Cantidad5').value, '30.00', 5)"> Comprar </button></button>    
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4jurassicworldcd.jpg'/><br />
+	<br>JURASSIC WORLD <br/><strong>USD$ 20,00</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad6">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('JURASSIC WORLD', document.getElementById('Cantidad6').value, '20.00', 6)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4mkxcd.jpg' width="500" height="500"/><br/>
+	<br>MORTAL KOMBAT X<strong><br/>USD$ 15,50</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad7">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('MORTAL KOMBAT X', document.getElementById('Cantidad7').value, '15.50', 7)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4dbfzcd.jpg' width="500" height="500"/><br /> 
+    <br>DragonBall FighterZ <strong><br/>USD$ 25,99</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad8">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('DRAGON BALL FIGHTERZ', document.getElementById('Cantidad8').value, '25.99', 8)" > Comprar </button></button>
+    </div>
+    </li>
+
+    </ul>
+    </div>
+    </div>
+    
+<div class="row">
+    <div class="container">
+    <ul class="row">
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4detroitbecomehumancd.jpg'/><br />
+	<br>Detroit Become <strong><br/>USD$ 20,00</strong><br/>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad9">
+	<button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('DETROIT BECOME HUMAN', document.getElementById('Cantidad9').value, '20.00', 9)"> Comprar </button></button>    
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4battlefieldvcd.jpg'/><br />    
+	<br>Battlefield V <strong><br/>USD$ 21,99</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad10">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('BattleField V', document.getElementById('Cantidad10').value, '21.99', 10)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4justcause4cd.jpg' width="500" height="500"/><br/>
+	<br>Just Cause 4<strong><br/>USD$ 28,90</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad11">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('JUST CAUSE 4', document.getElementById('Cantidad11').value, '28.90', 11)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4gododwarcd.jpg' width="500" height="500"/><br/>   
+    <br>God Of War <strong><br/>USD$ 25,90</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad12">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('GOD OF WAR', document.getElementById('Cantidad12').value, '25.90', 12)" > Comprar </button></button>
+    </div>
+    </li>
+
+    </ul>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="container">
+    <ul class="row">
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4unchargedcd.png'/><br/>
+	<br>Uncharted 4<strong><br/>USD$ 13,30</strong><br/>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad13">
+	<button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('UNCHARTED 4', document.getElementById('Cantidad13').value, '13.30', 13)"> Comprar </button></button>    
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4spidercd.jpg' width="500" height="500"/><br/>
+    <br>Spider-man <strong><br/> USD$ 15,99</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad14">
+    <button type="button" style=" color: aliceblue ; background-color:#31B404;" class="btn  btn-lg" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('SPIDER-MAN', document.getElementById('Cantidad14').value, '15.99', 14)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align = "center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4fifa19cd.jpg' width="500" height="500"/><br/>
+    <br>Fifa 19<strong><br/>USD$ 13,60</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad15">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('FIFA 19', document.getElementById('Cantidad15').value, '13.60', 15)"> Comprar </button></button>
+    </div>
+    </li>
+
+    <li class="col-md-3 sm-3 xs-12">
+    <div align="center">
+    <button type="button" class="btn btn-lg btn-outline-success"><img src='imagenes/small/ps4superbmancd.jpg' width="500" height="500"/><br/>
+    <br>Super Bomberman <strong><br/>USD$ 15,00</strong><br>
+	Cantidad: <input type="number" value="1" min="1" max="10" id="Cantidad16">
+    <button type="button" class="btn btn-lg" style=" color: aliceblue ; background-color:#31B404;" id="adicionar1" id="producto1" onclick="AgregarAlCarrito('SUPER BOMBERMAN', document.getElementById('Cantidad16').value, '15.00', 16)" > Comprar </button></button>
+    </div>
+    </li>
+
+    </ul>
+    </div>
+    </div>  
+        
+    <a href="#top"><button type="button"  style="background-color:rgb(0,153,120,0.3);" class="btn btn-outline-success"> 
+    <strong>^ <br> Volver Arriba </strong> 
+    </button> </a>
+</section>   
+<section>
+    <footer class="col-md-12 xs-12- sm-10">      
+    <div class="row">
+
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+        *
+        {
+          margin: 0;
+          padding: 8;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        :root
+        {
+          --clr: #222327;
+        }
+        footer
+        {
+          display: flex;
+          height: 40%;
+          padding: 2em;
+          justify-self: center;
+          justify-content:center;
+          align-items:center;
+          min-height: 100vh;
+          background: var(--clr);
+          border-radius: 2em;
+        }
+  
+        .red
+        {
+          display: flex;
+          flex-direction: column;
+          padding-left: 7em;
+        }
+  
+        .navigation
+        {
+          position:relative;
+          width: 310px;
+          height: 70px;
+          background: rgba(255,255,240,0.8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+        }
+        .navigation ul
+        {
+          display: flex;
+          width: 350px;
+        }
+        .navigation ul li
+        {
+          position: relative;
+          list-style: none;
+          width: 70px;
+          height: 70px;
+          z-index: 1;
+        }
+        .navigation ul li a
+        {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          font-weight: 500;
+        }
+        .navigation ul li a .icon
+        {
+          position: relative;
+          display: block;
+          line-height: 75px;
+          font-size: 1.5em;
+          text-align: center;
+          transition: 0.5s;
+          color: var(--clr);
+        }
+        .navigation ul li.active a .icon
+        {
+          transform: translateY(-35px);
+        }
+        .navigation ul li a .text
+        {
+          position:absolute;
+          color: var(--clr);
+          font-weight: 400;
+          font-size: 0.75em;
+          letter-spacing: 0.05em;
+          transition: 0.5s;
+          opacity: 0;
+          transform: translateY(20px);
+        } 
+        .navigation ul li.active a .text
+        {
+          opacity: 1;
+          transform: translateY(10px);
+          color: rgba(7, 7, 7, 0.8);
+          font-weight: bold;
+          font-size:12px;
+        }
+        .indicator
+        {
+          position: absolute;
+          top: -50%;
+          width: 70px;
+          height: 70px;
+          background: #06f512;
+          border-radius: 50%;
+          border: 6px solid var(--clr);
+          transition: 0.5s;
+        }
+        .indicator::before
+        {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -22px;
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border-top-right-radius: 20px;
+          box-shadow: 0px -10px 0 0 var(--clr);
+        }
+        .indicator::after
+        {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: -22px;
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border-top-left-radius: 20px;
+          box-shadow: -1px -10px 0 0 var(--clr);
+        }
+  
+        .navigation ul li:nth-child(1).active ~ .indicator
+        {
+          transform: translateX(calc(70px * 0));
+        }
+        .navigation ul li:nth-child(2).active ~ .indicator
+        {
+          transform: translateX(calc(70px * 1));
+        }
+        .navigation ul li:nth-child(3).active ~ .indicator
+        {
+          transform: translateX(calc(70px * 2));
+        }
+        .navigation ul li:nth-child(4).active ~ .indicator
+        {
+          transform: translateX(calc(70px * 3));
+        }
+      </style>
+  
+      <div class= "navigation">
+        <ul>
+          <li class="list">
+            <a href="index.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Inicio</span>
+            </a>
+          </li>
+  
+          <li class="list">
+            <a href="ps5.html">
+              <span class="icon">
+                <ion-icon name="game-controller-outline"></ion-icon>
+              </span>
+              <span class="text">PS5</span>
+            </a>
+          </li>
+  
+          <li class="list active">
+            <a href="ps4.html">
+              <span class="icon">
+                <ion-icon name="game-controller-sharp"></ion-icon>
+              </span>
+              <span class="text">PS4</span>
+            </a>
+          </li>
+
+          <li class="list">
+              <a href="loginregistro.html">
+                <span class="icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="text">Login</span>
+              </a>
+            </li>
+  
+          <div class="indicator"></div>
+        </ul>
+      </div>
+      </div>    
+
+    <div class="red"><a href="https://es-la.facebook.com">
+    <img pading="1em" src="imagenes/facebook.png" alt="facebook" width="70px" height="70px">  </a> 
+    <a href="https://www.instagram.com"><img src="imagenes/instagram.png" alt="instagram" width="70px" height="70px"> </a>
+    </div> 
+  
+    </div>
+    </footer>
+    
+  </section>
+        <div class="small-print">
+          <div class="row-center">
+            <div class="container col-md-7">
+                <p style="text-align: center;"> Mundo PlayStation Productos Eletronicos - Plazuela Suipacha Nº 1546 Celular: 77489853  todops@mps.com    -   Potosí-Bolivia</p>
+                <p style="text-align: center;">Copyright &copy; Mundo PlayStation 2022 </p>
+          </div>
+          </div>
+        </div>
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLinck(){
+              list.forEach((item) => 
+              item.classList.remove('active'));
+              this.classList.add('active');
+            }
+            list.forEach((item) => 
+            item.addEventListener('click',activeLinck));
+          </script>
+          
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>  
+<script href="fontawesome-free-5.5.0-desktop/svgs/spinner-solid.svg"></script>
+
+<script>
+	function AgregarAlCarrito(producto, Cantidad, valor, posicion)
+	{
+		localStorage.setItem("producto" + posicion, producto);
+		localStorage.setItem("Cantidad" + posicion, Cantidad);
+		valor = valor * Cantidad;
+		localStorage.setItem("valor" + posicion, valor);
+		alert("Producto Añadido al Carrito!");
+        location.reload();
+	}
+    
+</script>
+
+<script>
+  function terminar()
+  {
+    alert("Compra Exitosa!");
+        location.reload();
+    localStorage.clear();
+  }
+    
+  </script>
+
+    <script src="js/script.js"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="jquery/jquery-3.2.1.slim.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+<script>
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+
+</script>     
+</body>
+</html>
